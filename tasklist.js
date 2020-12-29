@@ -6,6 +6,7 @@ const taskElement = document.querySelector("#task");
 const multipleTasksElement = document.querySelector("#multiple_tasks");
 const formElement = document.querySelector("form");
 const taskListElement = document.querySelector("#tasks");
+const clearButton = document.querySelector("#clear");
 
 function addElementToList(task){
     if(task != ""){
@@ -29,4 +30,9 @@ formElement.onsubmit = ()=>{
     // stops form from submitting
     return false;
 }
+
+clearButton.addEventListener("click", function(){
+    taskListElement.innerHTML = "";
+})
+
 })
